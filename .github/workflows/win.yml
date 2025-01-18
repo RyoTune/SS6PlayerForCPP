@@ -13,3 +13,9 @@ jobs:
     - name: release build
       run: .\scripts\release_win.ps1 Release
 
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        path: buildwin
+        retention-days: 0
+
